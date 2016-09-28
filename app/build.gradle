@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId "se.bylenny.kviss"
+        minSdkVersion project.ext.minAndroidVersion
+        targetSdkVersion project.ext.maxAndroidVersion
+        minSdkVersion 21
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'LICENSE.txt'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
+
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // https://mvnrepository.com/artifact/com.jakewharton/butterknife-annotations
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+
+    // https://mvnrepository.com/artifact/io.reactivex/rxjava
+    compile group: 'io.reactivex', name: 'rxjava', version: '1.2.0'
+    // https://mvnrepository.com/artifact/io.reactivex/rxandroid
+    compile group: 'io.reactivex', name: 'rxandroid', version: '1.2.1'
+
+    // Google
+    compile "com.android.support:design:$googleSupportVersion"
+    compile "com.android.support:support-v4:$googleSupportVersion"
+    compile "com.android.support:appcompat-v7:$googleSupportVersion"
+    compile "com.android.support:cardview-v7:$googleSupportVersion"
+    compile "com.android.support:recyclerview-v7:$googleSupportVersion"
+    compile "com.android.support:percent:$googleSupportVersion"
+    compile "com.android.support:support-annotations:$googleSupportVersion"
+
+    // Test formatting
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
+
+    // Logging
+    compile 'org.slf4j:slf4j-android:1.7.21'
+
+    // Helpers
+    // NOTE: needs plugin http://plugins.jetbrains.com/plugin/7462
+    provided "pl.mg6.hrisey:hrisey:$hriseyVersion"
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.9.5'
+}

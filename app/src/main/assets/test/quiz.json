@@ -1,0 +1,62 @@
+{
+  "id": "amazing",
+  "title": "The amazing quiz",
+  "image": "http://i.imgur.com/rafOoZp.jpg",
+  "timeLimit": 10000,
+  "questions": [
+    {
+      "title": "Which one is the largest?",
+      "id": "q1",
+      "correctAnswerId": "a1",
+      "options": [
+        {
+          "title": "A redwood tree",
+          "id": "a1"
+        },
+        {
+          "title": "A water melon",
+          "id": "a2"
+        },
+        {
+          "title": "A roller coaster",
+          "id": "a3"
+        },
+        {
+          "title": "An albatross",
+          "id": "a4"
+        },
+        {
+          "title": "A wedding cake",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Which one is the smallest?",
+      "id": "q2",
+      "correctAnswerId": "a1",
+      "options": [
+        {
+          "title": "A redwood tree",
+          "id": "a1"
+        },
+        {
+          "title": "A water melon",
+          "id": "a2"
+        },
+        {
+          "title": "A roller coaster",
+          "id": "a3"
+        },
+        {
+          "title": "An albatross",
+          "id": "a4"
+        },
+        {
+          "title": "A wedding cake",
+          "id": "a5"
+        }
+      ]
+    }
+  ]
+}
