@@ -1,0 +1,278 @@
+{
+  "id": "dummy",
+  "title": "The Test Dummy Quiz",
+  "image": "file:///android_asset/dummy/logo.jpg",
+  "timeLimit": 10000,
+  "questions": [
+    {
+      "title": "Is this a question?",
+      "id": "q1",
+      "correctAnswerId": "a5",
+      "options": [
+        {
+          "title": "Yes!",
+          "id": "a1"
+        },
+        {
+          "title": "No!",
+          "id": "a2"
+        },
+        {
+          "title": "Maybe?",
+          "id": "a3"
+        },
+        {
+          "title": "Sort of!",
+          "id": "a4"
+        },
+        {
+          "title": "No comment!",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Is this a question?",
+      "id": "q2",
+      "correctAnswerId": "a1",
+      "options": [
+        {
+          "title": "Yes!",
+          "id": "a1"
+        },
+        {
+          "title": "No!",
+          "id": "a2"
+        },
+        {
+          "title": "Maybe?",
+          "id": "a3"
+        },
+        {
+          "title": "Sort of!",
+          "id": "a4"
+        },
+        {
+          "title": "No comment!",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Is this a question?",
+      "id": "q3",
+      "correctAnswerId": "a4",
+      "options": [
+        {
+          "title": "Yes!",
+          "id": "a1"
+        },
+        {
+          "title": "No!",
+          "id": "a2"
+        },
+        {
+          "title": "Maybe?",
+          "id": "a3"
+        },
+        {
+          "title": "Sort of!",
+          "id": "a4"
+        },
+        {
+          "title": "No comment!",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Is this a question?",
+      "id": "q4",
+      "correctAnswerId": "a5",
+      "options": [
+        {
+          "title": "Yes!",
+          "id": "a1"
+        },
+        {
+          "title": "No!",
+          "id": "a2"
+        },
+        {
+          "title": "Maybe?",
+          "id": "a3"
+        },
+        {
+          "title": "Sort of!",
+          "id": "a4"
+        },
+        {
+          "title": "No comment!",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Is this a question?",
+      "id": "q5",
+      "correctAnswerId": "a2",
+      "options": [
+        {
+          "title": "Yes!",
+          "id": "a1"
+        },
+        {
+          "title": "No!",
+          "id": "a2"
+        },
+        {
+          "title": "Maybe?",
+          "id": "a3"
+        },
+        {
+          "title": "Sort of!",
+          "id": "a4"
+        },
+        {
+          "title": "No comment!",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Is this a question?",
+      "id": "q6",
+      "correctAnswerId": "a3",
+      "options": [
+        {
+          "title": "Yes!",
+          "id": "a1"
+        },
+        {
+          "title": "No!",
+          "id": "a2"
+        },
+        {
+          "title": "Maybe?",
+          "id": "a3"
+        },
+        {
+          "title": "Sort of!",
+          "id": "a4"
+        },
+        {
+          "title": "No comment!",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Is this a question?",
+      "id": "q7",
+      "correctAnswerId": "a1",
+      "options": [
+        {
+          "title": "Yes!",
+          "id": "a1"
+        },
+        {
+          "title": "No!",
+          "id": "a2"
+        },
+        {
+          "title": "Maybe?",
+          "id": "a3"
+        },
+        {
+          "title": "Sort of!",
+          "id": "a4"
+        },
+        {
+          "title": "No comment!",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Is this a question?",
+      "id": "q8",
+      "correctAnswerId": "a2",
+      "options": [
+        {
+          "title": "Yes!",
+          "id": "a1"
+        },
+        {
+          "title": "No!",
+          "id": "a2"
+        },
+        {
+          "title": "Maybe?",
+          "id": "a3"
+        },
+        {
+          "title": "Sort of!",
+          "id": "a4"
+        },
+        {
+          "title": "No comment!",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Is this a question?",
+      "id": "q9",
+      "correctAnswerId": "a3",
+      "options": [
+        {
+          "title": "Yes!",
+          "id": "a1"
+        },
+        {
+          "title": "No!",
+          "id": "a2"
+        },
+        {
+          "title": "Maybe?",
+          "id": "a3"
+        },
+        {
+          "title": "Sort of!",
+          "id": "a4"
+        },
+        {
+          "title": "No comment!",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Is this a question?",
+      "id": "q10",
+      "correctAnswerId": "a2",
+      "options": [
+        {
+          "title": "Yes!",
+          "id": "a1"
+        },
+        {
+          "title": "No!",
+          "id": "a2"
+        },
+        {
+          "title": "Maybe?",
+          "id": "a3"
+        },
+        {
+          "title": "Sort of!",
+          "id": "a4"
+        },
+        {
+          "title": "No comment!",
+          "id": "a5"
+        }
+      ]
+    }
+  ]
+}

@@ -2,8 +2,10 @@
     <string name="app_name">Kviss</string>
     <string name="unexpected_error">Sorry, something went wrong!</string>
     <string name="start_quiz">Start quiz</string>
-    <string name="correct">Correct answer: </string>
-    <string name="given">Given answer: </string>
-    <string name="instructions">You will be asked %1$d questions. Each question has a %2$d options. Only one of the options is correct. You will be given %3$d seconds to answer each question. Press the button when ready. Good luck!</string>
+    <string name="correct">Correct answer</string>
+    <string name="given">Given answer</string>
+    <string name="instructions">You will be asked %1$d questions with multiple options. Only one of the options is correct. You will be given %2$d seconds to answer each question. Press the button when ready. Good luck!</string>
     <string name="press_back">Press back again to leave the quiz</string>
+    <string name="result_template">You have answered %1$d of %2$d questions correct</string>
+    <string name="empty_answer">No answer given</string>
 </resources>

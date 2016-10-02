@@ -5,33 +5,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/margin_large"
-    android:paddingLeft="@dimen/margin_large"
-    android:paddingRight="@dimen/margin_large"
-    android:paddingTop="@dimen/margin_large"
     tools:context="se.bylenny.kviss.activity.StartActivity">
 
-    <TextView
-        tools:text="Title"
-        style="@style/TitleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/title"
-        android:layout_gravity="top|center_horizontal"/>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:scaleType="centerCrop"
+        android:tint="@color/image_tint"
+        android:transitionName="@string/transition_background"
+        tools:src="@mipmap/ic_launcher"
+        />
 
     <TextView
-        style="@style/ContentText"
-        tools:text="@string/instructions"
+        android:id="@+id/title"
+        style="@style/LargeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_margin="@dimen/margin_large"
+        android:transitionName="@string/transition_title"
+        tools:text="Title"/>
+
+    <TextView
         android:id="@+id/instructions"
-        android:layout_gravity="center"/>
+        style="@style/MediumText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:backgroundTint="@color/overlay_tint"
+        android:padding="@dimen/margin_large"
+        tools:text="@string/instructions"/>
 
     <Button
-        android:text="@string/start_quiz"
+        android:id="@+id/start_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/start_button"
-        android:layout_gravity="bottom|center"/>
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/margin_large"
+        android:text="@string/start_quiz"/>
 
 </FrameLayout>

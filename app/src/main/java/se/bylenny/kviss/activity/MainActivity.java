@@ -15,8 +15,9 @@ import butterknife.ButterKnife;
 import rx.Subscription;
 import rx.functions.Action1;
 import se.bylenny.kviss.R;
+import se.bylenny.kviss.builder.TransitionBuilder;
 import se.bylenny.kviss.list.QuizAdapter;
-import se.bylenny.kviss.model.Entity;
+import se.bylenny.kviss.list.QuizListItem;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
     private QuizAdapter adapter;
     private Subscription subscription;
 
+    public static Intent createIntent(Context context) {
+        return new Intent(context, MainActivity.class);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         try {
             adapter = new QuizAdapter(this);
             quizListView.setLayoutManager(new LinearLayoutManager(this));
+            quizListView.setItemViewCacheSize(20);
+            quizListView.setDrawingCacheEnabled(true);
             quizListView.setAdapter(adapter);
         } catch (IOException e) {
             e.printStackTrace();
@@ -45,11 +52,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        subscription = adapter.asObservable().subscribe(new Action1<Entity>() {
+        subscription = adapter.asObservable().subscribe(new Action1<QuizListItem>() {
             @Override
-            public void call(Entity quiz) {
-                Intent intent = StartActivity.createIntent(getApplicationContext(), quiz.getId());
-                startActivity(intent);
+            public void call(QuizListItem item) {
+                Intent intent = StartActivity.createIntent(
+                        getApplicationContext(), item.getEntity().getId());
+                Bundle bundle = new TransitionBuilder(MainActivity.this)
+                        .with(item.getImageView(), R.string.transition_background)
+                        .with(item.getTextView(), R.string.transition_title)
+                        .build();
+                startActivity(intent, bundle);
             }
         });
     }
@@ -59,9 +71,5 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         subscription.unsubscribe();
         subscription = null;
-    }
-
-    public static Intent createIntent(Context context) {
-        return new Intent(context, MainActivity.class);
     }
 }

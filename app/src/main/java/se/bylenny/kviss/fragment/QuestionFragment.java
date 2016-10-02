@@ -33,15 +33,20 @@ public class QuestionFragment extends Fragment {
     private static final String TIME_LEFT = "TIME_LEFT";
     private static final String TIME = "TIME";
     private static final String EMPTY_ANSWER = null;
-    private static final long RESOLUTION = 100;
+    private static final long RESOLUTION = 50;
+
     @BindView(R.id.question_text)
     TextView questionView;
+
     @BindView(R.id.index)
     TextView indexView;
+
     @BindView(R.id.timer)
     ProgressBar timerView;
+
     @BindView(R.id.answers)
     LinearLayout answersView;
+
     private Action1<Throwable> exitAction = new Action1<Throwable>() {
         @Override
         public void call(Throwable e) {
@@ -155,12 +160,7 @@ public class QuestionFragment extends Fragment {
                                 onOutOfTime();
                             }
                         }
-                    }, new Action1<Throwable>() {
-                        @Override
-                        public void call(Throwable e) {
-                            e.printStackTrace();
-                        }
-                    });
+                    }, exitAction);
         }
     }
 

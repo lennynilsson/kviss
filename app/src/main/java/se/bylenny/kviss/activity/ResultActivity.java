@@ -18,8 +18,10 @@ public class ResultActivity extends AppCompatActivity {
 
     private static final String EXTRA_QUIZ = "EXTRA_QUIZ";
     private static final String EXTRA_SUBMISSION = "EXTRA_SUBMISSION";
+
     @BindView(R.id.result_list)
     RecyclerView resultListView;
+
     private Quiz quiz;
     private Submission submission;
     private ResultsAdapter adapter;

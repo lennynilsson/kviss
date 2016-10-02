@@ -1,46 +1,48 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout android:id="@+id/question_title"
+             xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:padding="@dimen/margin_large"
-             tools:context="se.bylenny.kviss.fragment.QuestionFragment"
-             android:id="@+id/question_title">
+             tools:context="se.bylenny.kviss.fragment.QuestionFragment">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_gravity="top|fill_horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_gravity="top|fill_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/index"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TinyText"
+            tools:text="3/10"/>
 
         <ProgressBar
             android:id="@+id/timer"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            tools:text="3/10"
-            android:id="@+id/index"
-            android:layout_marginTop="@dimen/margin_large"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/SmallText"/>
-
-        <TextView
-            tools:text="This is the question?"
-            android:id="@+id/question_text"
             android:layout_marginTop="@dimen/margin_small"
+            tools:max="100"
+            tools:progress="37"/>
+
+        <TextView
+            android:id="@+id/question_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/TitleText"/>
+            android:layout_marginTop="@dimen/margin_small"
+            android:theme="@style/LargeText"
+            tools:text="This is the question?"/>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/answers"
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|fill_horizontal">
+        android:layout_gravity="bottom|fill_horizontal"
+        android:orientation="vertical">
     </LinearLayout>
 
 </FrameLayout>

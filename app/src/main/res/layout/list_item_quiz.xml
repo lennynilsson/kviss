@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.percent.PercentFrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:clickable="true">
+    android:clickable="true"
+    android:orientation="vertical">
 
     <ImageView
         android:id="@+id/image"
-        app:layout_widthPercent="100%"
-        app:layout_aspectRatio="178%"
-        tools:src="@mipmap/ic_launcher"
-        android:scaleType="centerCrop"
         android:clickable="false"
+        android:scaleType="centerCrop"
+        android:tint="@color/image_tint"
+        android:transitionName="@string/transition_background"
+        app:layout_aspectRatio="178%"
+        app:layout_widthPercent="100%"
+        tools:src="@mipmap/ic_launcher"
         />
 
-    <TextView
-        style="@style/TitleText"
-        android:id="@+id/title"
-        android:text="TextView"
-        android:paddingStart="@dimen/margin_medium"
-        android:paddingTop="@dimen/margin_medium"
+    <!-- The LinearLayout keeps animations from jumping -->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|start"
-        android:clickable="false"
-        android:gravity="center"/>
+        android:layout_gravity="top|left"
+        android:layout_margin="@dimen/margin_medium">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/LargeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="TextView"
+            android:transitionName="@string/transition_title"/>
+    </LinearLayout>
 </android.support.percent.PercentFrameLayout>

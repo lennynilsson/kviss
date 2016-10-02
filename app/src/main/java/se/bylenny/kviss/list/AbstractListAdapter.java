@@ -9,18 +9,18 @@ import java.util.List;
 import rx.Observable;
 import rx.subjects.PublishSubject;
 
-public abstract class AbstractListAdapter<T> extends RecyclerView.Adapter<ListItem<T>> {
+public abstract class AbstractListAdapter<T, I extends ListItem<T>> extends RecyclerView.Adapter<I> {
 
     private List<T> list = Arrays.asList();
-    private PublishSubject<T> clickPublisher = PublishSubject.create();
+    private PublishSubject<I> clickPublisher = PublishSubject.create();
 
     @Override
-    public ListItem<T> onCreateViewHolder(ViewGroup parent, int viewType) {
+    public I onCreateViewHolder(ViewGroup parent, int viewType) {
         return createViewHolder(parent);
     }
 
     @Override
-    public void onBindViewHolder(ListItem<T> holder, int position) {
+    public void onBindViewHolder(I holder, int position) {
         T item = getItem(position);
         holder.bind(position, item, clickPublisher);
     }
@@ -34,7 +34,7 @@ public abstract class AbstractListAdapter<T> extends RecyclerView.Adapter<ListIt
         return list.get(position);
     }
 
-    public Observable<T> asObservable() {
+    public Observable<I> asObservable() {
         return clickPublisher;
     }
 
@@ -43,5 +43,5 @@ public abstract class AbstractListAdapter<T> extends RecyclerView.Adapter<ListIt
         return list.size();
     }
 
-    public abstract ListItem<T> createViewHolder(ViewGroup parent);
+    public abstract I createViewHolder(ViewGroup parent);
 }

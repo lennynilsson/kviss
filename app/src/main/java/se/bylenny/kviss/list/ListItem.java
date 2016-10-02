@@ -15,5 +15,5 @@ public abstract class ListItem<T> extends RecyclerView.ViewHolder {
         this.context = context;
     }
 
-    public abstract void bind(int position, T item, PublishSubject<T> subject);
+    public abstract <I extends ListItem<T>> void bind(int position, T item, PublishSubject<I> subject);
 }

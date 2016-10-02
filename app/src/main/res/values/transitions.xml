@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="transition_background" formatted="false" translatable="false">background</string>
+    <string name="transition_title" formatted="false" translatable="false">title</string>
+</resources>

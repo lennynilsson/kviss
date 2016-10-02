@@ -15,7 +15,6 @@ public class ResultsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private final Submission submission;
 
     public ResultsAdapter(Quiz quiz, Submission submission) {
-
         this.quiz = quiz;
         this.submission = submission;
     }
@@ -41,7 +40,9 @@ public class ResultsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         switch (holder.getItemViewType()) {
             case HEADER:
-                ((HeaderListItem) holder).bind(quiz.getTitle());
+                int correct = countCorrectAnswers();
+                int total = quiz.getQuestions().length;
+                ((HeaderListItem) holder).bind(quiz.getTitle(), correct, total);
                 break;
             case ITEM:
                 // Compensate for title index
@@ -52,16 +53,30 @@ public class ResultsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 String correctId = question.getCorrectAnswerId();
                 String givenAnswer = getTitleForId(options, givenId);
                 String correctAnswer = getTitleForId(options, correctId);
+                boolean isCorrect = null != givenId && 0 == correctId.compareTo(givenId);
                 ((ResultListItem) holder).bind(
-                        questionTitle, givenAnswer, correctAnswer, 0 == correctId.compareTo(givenId));
+                        questionTitle, givenAnswer, correctAnswer, isCorrect);
                 break;
         }
     }
 
+    private int countCorrectAnswers() {
+        int count = 0;
+        for (Question question : quiz.getQuestions()) {
+            String answer = submission.getAnswer(question.getId());
+            if (null != answer && 0 == question.getCorrectAnswerId().compareTo(answer)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
     private String getTitleForId(Entity[] options, String id) {
-        for (Entity entity : options) {
-            if (0 == id.compareTo(entity.getId())) {
-                return entity.getTitle();
+        if (null != id) {
+            for (Entity entity : options) {
+                if (0 == entity.getId().compareTo(id)) {
+                    return entity.getTitle();
+                }
             }
         }
         return null;

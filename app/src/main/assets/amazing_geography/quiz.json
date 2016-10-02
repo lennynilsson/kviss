@@ -1,0 +1,278 @@
+{
+  "id": "amazing_geography",
+  "title": "The Great Geography Quiz",
+  "image": "file:///android_asset/amazing_geography/logo.jpg",
+  "timeLimit": 10000,
+  "questions": [
+    {
+      "title": "In which European country is the city of Salzburg?",
+      "id": "q1",
+      "correctAnswerId": "a1",
+      "options": [
+        {
+          "title": "Austria",
+          "id": "a1"
+        },
+        {
+          "title": "Czech Republic",
+          "id": "a2"
+        },
+        {
+          "title": "Germany",
+          "id": "a3"
+        },
+        {
+          "title": "Switzerland",
+          "id": "a4"
+        },
+        {
+          "title": "Latvia",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "To which EU member state do the islands of Gozo and Comino belong?",
+      "id": "q2",
+      "correctAnswerId": "a4",
+      "options": [
+        {
+          "title": "Cyprus",
+          "id": "a1"
+        },
+        {
+          "title": "Greece",
+          "id": "a2"
+        },
+        {
+          "title": "Italy",
+          "id": "a3"
+        },
+        {
+          "title": "Malta",
+          "id": "a4"
+        },
+        {
+          "title": "Spain",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Where in Italy can the Ponte Vecchio be found?",
+      "id": "q3",
+      "correctAnswerId": "a1",
+      "options": [
+        {
+          "title": "Florence",
+          "id": "a1"
+        },
+        {
+          "title": "Naples",
+          "id": "a2"
+        },
+        {
+          "title": "Rome",
+          "id": "a3"
+        },
+        {
+          "title": "Venice",
+          "id": "a4"
+        },
+        {
+          "title": "Bologna",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Into which sea does the River Danube flow?",
+      "id": "q4",
+      "correctAnswerId": "a2",
+      "options": [
+        {
+          "title": "Baltic Sea",
+          "id": "a1"
+        },
+        {
+          "title": "Black Sea",
+          "id": "a2"
+        },
+        {
+          "title": "Mediterranean Sea",
+          "id": "a3"
+        },
+        {
+          "title": "North Sea",
+          "id": "a4"
+        },
+        {
+          "title": "Tyrrhenian Sea",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Above which city does Panorama rise?",
+      "id": "q5",
+      "correctAnswerId": "a1",
+      "options": [
+        {
+          "title": "Thessaloniki",
+          "id": "a1"
+        },
+        {
+          "title": "Toulouse",
+          "id": "a2"
+        },
+        {
+          "title": "Trondheim",
+          "id": "a3"
+        },
+        {
+          "title": "Turin",
+          "id": "a4"
+        },
+        {
+          "title": "Milano",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Known in Flemish as \"Luik\" what is the French name for this Belgian city?",
+      "id": "q6",
+      "correctAnswerId": "a2",
+      "options": [
+        {
+          "title": "Charleroi",
+          "id": "a1"
+        },
+        {
+          "title": "Liège",
+          "id": "a2"
+        },
+        {
+          "title": "Mons",
+          "id": "a3"
+        },
+        {
+          "title": "Namur",
+          "id": "a4"
+        },
+        {
+          "title": "Monsli",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Which European country is denoted by the letters \"CH\" on motor vehicles?",
+      "id": "q7",
+      "correctAnswerId": "a4",
+      "options": [
+        {
+          "title": "Croatia",
+          "id": "a1"
+        },
+        {
+          "title": "Cyprus",
+          "id": "a2"
+        },
+        {
+          "title": "Czech Republic",
+          "id": "a3"
+        },
+        {
+          "title": "Switzerland",
+          "id": "a4"
+        },
+        {
+          "title": "Bosnia",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Which European country was re-unified on 3rd October 1990?",
+      "id": "q8",
+      "correctAnswerId": "a2",
+      "options": [
+        {
+          "title": "Cyprus",
+          "id": "a1"
+        },
+        {
+          "title": "Germany",
+          "id": "a2"
+        },
+        {
+          "title": "Poland",
+          "id": "a3"
+        },
+        {
+          "title": "Russia",
+          "id": "a4"
+        },
+        {
+          "title": "Spain",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Which country, whose capital is Tallinn, became independent from the USSR in 1991?",
+      "id": "q9",
+      "correctAnswerId": "a1",
+      "options": [
+        {
+          "title": "Estonia",
+          "id": "a1"
+        },
+        {
+          "title": "Finland",
+          "id": "a2"
+        },
+        {
+          "title": "Slovakia",
+          "id": "a3"
+        },
+        {
+          "title": "Slovenia",
+          "id": "a4"
+        },
+        {
+          "title": "Poland",
+          "id": "a5"
+        }
+      ]
+    },
+    {
+      "title": "Which river flows through the Irish capital, Dublin?",
+      "id": "q10",
+      "correctAnswerId": "a3",
+      "options": [
+        {
+          "title": "Boyne",
+          "id": "a1"
+        },
+        {
+          "title": "Lee",
+          "id": "a2"
+        },
+        {
+          "title": "Liffey",
+          "id": "a3"
+        },
+        {
+          "title": "Shannon",
+          "id": "a4"
+        },
+        {
+          "title": "Péronne",
+          "id": "a5"
+        }
+      ]
+    }
+  ]
+}

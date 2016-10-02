@@ -13,7 +13,7 @@ import java.lang.reflect.Type;
 public class Assets {
 
     /**
-     * Read a data file from assets
+     * Read a data file with assets
      *
      * @param <T>      The type
      * @param fileName The file name

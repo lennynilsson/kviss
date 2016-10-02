@@ -8,24 +8,38 @@
     android:padding="@dimen/margin_medium">
 
     <TextView
-        style="@style/TitleText"
         android:id="@+id/question_title"
-        tools:text="TextView"
+        style="@style/MediumText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_small"/>
+        android:layout_marginBottom="@dimen/margin_small"
+        tools:text="TextView"/>
 
     <TextView
-        style="@style/SmallText"
+        style="@style/TinyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/given"/>
+
+    <TextView
         android:id="@+id/given"
-        tools:text="Given Answer"
+        style="@style/SmallText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        tools:text="Given Answer"/>
 
     <TextView
-        style="@style/SmallText"
-        android:id="@+id/correct"
-        tools:text="Correct answer"
+        style="@style/TinyText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="@string/correct"/>
+
+    <TextView
+        android:id="@+id/correct"
+        style="@style/SmallText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        tools:text="Correct answer"/>
 </LinearLayout>
